@@ -1,0 +1,4 @@
+worldTime = 0
+It is 0:00 on day 1 of the year 1
+Trammel is in day 1 of its 9 day phase.
+Felucca is in day 1 of its 14 day phase.
