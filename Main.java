@@ -1,10 +1,13 @@
 public class Ultimad{
   public static final int worldTime = 0;
+  //Following variables abbreviated from minutes-per-year, minutes-per-day, & minutes-per-hour.
   public static final int mpy = 525600;
   public static final int mpd = 1440;
   public static final int mph = 60;
   public static void main(String[] args){
-    System.out.printf("worldTime = "+worldTime+"\nIt is "+hour()+":%02d on day "+day()+" of the year "+year()+".\nTrammel is in day "+tram()+" of its 9 day phase.\nFelucca is in day "+felu()+" of its 14 day phase.",min());
+    System.out.printf("worldTime = "+worldTime+"\nIt is "+hour()+":%02d on day "+day()+" of the year "+year()
+                      +".\nTrammel is in day "+tram()+" of its 9 day phase.\nFelucca is in day "+felu()
+                      +" of its 14 day phase.",min());
   }
   public static int year(){
     return 1+worldTime/mpy;
