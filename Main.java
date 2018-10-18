@@ -1,37 +1,25 @@
 public class Ultimad{
+  public static int worldTime = 52560000;
   public static void main(String[] args){
-    int time = 0;
-    int rem = time;
-    int year = year(time);
-    rem = time - ((year-1)*(365*24*60));
-    int day = day(rem);
-    rem = rem - ((day-1)*(24*60));
-    int hour = hour(rem);
-    rem = rem - (hour*(60));
-    int min = rem;
-    int tram = tram(time);
-    int felu = felu(time);
-    print(time,hour,min,day,year,tram,felu);
+    System.out.printf("worldTime = "+worldTime+"\nIt is "+hour()+":%02d on day "+day()+" of the year "+year()+".\nTrammel is in day "+tram()+" of its 9 day phase.\nFelucca is in day "+felu()+" of its 14 day phase.",min());
   }
-  public static int year(int x){
-    return (1+(x/(365*24*60)));
+  public static int year(){
+    return 1+worldTime/525600;
   }
-  public static int day(int x){
-    return (1+(x/(24*60)));
+  public static int day(){
+    return 1+worldTime%525600/1440;
   }
-  public static int hour(int x){
-    return (x/60);
+  public static int hour(){
+    return worldTime%525600%1440/60;
   }
-  public static int tram(int x){
-    return (1+(x/(24*60)))%9;
+  public static int min(){
+    return worldTime%525600%1440%60;
   }
-  public static int felu(int x){
-    return (1+(x/(24*60)))%14;
+   public static int tram(){
+    return (1+worldTime/1440)%9;
   }
-  public static void print(int time, int hour, int min, int day, int year, int tram, int felu){
-    System.out.println("worldTime = "+time);
-    System.out.printf("It is "+hour+":%02d on day "+day+" of the year "+year,min);
-    System.out.print("\nTrammel is in day "+tram+" of its 9 day phase.\nFelucca is in day "+felu+" of its 14 day phase.");
+  public static int felu(){
+    return (1+worldTime/1440)%14;
   }
 }
 /* 
