@@ -1,25 +1,28 @@
 public class Ultimad{
   public static int worldTime = 52560000;
+  public static int mpy = 525600;
+  public static int mpd = 1440;
+  public static int mph = 60;
   public static void main(String[] args){
     System.out.printf("worldTime = "+worldTime+"\nIt is "+hour()+":%02d on day "+day()+" of the year "+year()+".\nTrammel is in day "+tram()+" of its 9 day phase.\nFelucca is in day "+felu()+" of its 14 day phase.",min());
   }
   public static int year(){
-    return 1+worldTime/525600;
+    return 1+worldTime/mpy;
   }
   public static int day(){
-    return 1+worldTime%525600/1440;
+    return 1+worldTime%mpy/mpd;
   }
   public static int hour(){
-    return worldTime%525600%1440/60;
+    return worldTime%mpy%mpd/mph;
   }
   public static int min(){
-    return worldTime%525600%1440%60;
+    return worldTime%mpy%mpd%mph;
   }
    public static int tram(){
-    return (1+worldTime/1440)%9;
+    return (1+worldTime/mpd)%9;
   }
   public static int felu(){
-    return (1+worldTime/1440)%14;
+    return (1+worldTime/mpd)%14;
   }
 }
 /* 
