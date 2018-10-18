@@ -1,8 +1,8 @@
 public class Ultimad{
-  public static int worldTime = 52560000;
-  public static int mpy = 525600;
-  public static int mpd = 1440;
-  public static int mph = 60;
+  public static final int worldTime = 0;
+  public static final int mpy = 525600;
+  public static final int mpd = 1440;
+  public static final int mph = 60;
   public static void main(String[] args){
     System.out.printf("worldTime = "+worldTime+"\nIt is "+hour()+":%02d on day "+day()+" of the year "+year()+".\nTrammel is in day "+tram()+" of its 9 day phase.\nFelucca is in day "+felu()+" of its 14 day phase.",min());
   }
